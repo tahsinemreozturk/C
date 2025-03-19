@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2.5TwoSum", "TwoSum\TwoSum.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MemoryConceptsAndAirthmetics.c", "MemoryConceptsAndAirthmetics.c\MemoryConceptsAndAirthmetics.c.vcxproj", "{215B1A04-A896-4F15-869B-A51871C4735D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EqualityAndRelationalOperators", "EqualityAndRelationalOperators\EqualityAndRelationalOperators.vcxproj", "{32BE741A-C623-4C6E-8BD0-58CD357CA958}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{215B1A04-A896-4F15-869B-A51871C4735D}.Release|x64.Build.0 = Release|x64
 		{215B1A04-A896-4F15-869B-A51871C4735D}.Release|x86.ActiveCfg = Release|Win32
 		{215B1A04-A896-4F15-869B-A51871C4735D}.Release|x86.Build.0 = Release|Win32
+		{32BE741A-C623-4C6E-8BD0-58CD357CA958}.Debug|x64.ActiveCfg = Debug|x64
+		{32BE741A-C623-4C6E-8BD0-58CD357CA958}.Debug|x64.Build.0 = Debug|x64
+		{32BE741A-C623-4C6E-8BD0-58CD357CA958}.Debug|x86.ActiveCfg = Debug|Win32
+		{32BE741A-C623-4C6E-8BD0-58CD357CA958}.Debug|x86.Build.0 = Debug|Win32
+		{32BE741A-C623-4C6E-8BD0-58CD357CA958}.Release|x64.ActiveCfg = Release|x64
+		{32BE741A-C623-4C6E-8BD0-58CD357CA958}.Release|x64.Build.0 = Release|x64
+		{32BE741A-C623-4C6E-8BD0-58CD357CA958}.Release|x86.ActiveCfg = Release|Win32
+		{32BE741A-C623-4C6E-8BD0-58CD357CA958}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
