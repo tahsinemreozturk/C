@@ -133,6 +133,7 @@
     <ClCompile Include="2.23.c" />
     <ClCompile Include="2.24.c" />
     <ClCompile Include="2.26.c" />
+    <ClCompile Include="2.27.c" />
     <ClCompile Include="2.3.c" />
     <ClCompile Include="2.4.c" />
   </ItemGroup>
