@@ -33,5 +33,8 @@
     <ClCompile Include="2.23.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="2.24.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
