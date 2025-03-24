@@ -2,27 +2,26 @@
 
 int main(void)
 {
-	int masraf,yol, benzinFiyat, ortalamaYakitTuketim, parkUcreti, otobanUcreti;
+    int cost, distance, fuelPrice, averageFuelConsumption, parkingFee, tollFee;
 
-	printf("Gunluk surdugunuz yol mesafesini giriniz: \n");
-	scanf_s("%d", &yol);
+    printf("Enter the daily distance you drive: \n");
+    scanf_s("%d", &distance);
 
-	printf("Benzin fiyatini giriniz: \n");
-	scanf_s("%d", &benzinFiyat);
+    printf("Enter the fuel price: \n");
+    scanf_s("%d", &fuelPrice);
 
-	printf("Ortalama yakit tuketim miktarinizi giriniz: \n");
-	scanf_s("%d", &ortalamaYakitTuketim);
+    printf("Enter your average fuel consumption: \n");
+    scanf_s("%d", &averageFuelConsumption);
 
-	printf("Gunluk park masrafinizi giriniz: \n");
-	scanf_s("%d", &parkUcreti);
+    printf("Enter your daily parking fee: \n");
+    scanf_s("%d", &parkingFee);
 
-	printf("Gunluk otoban gecis ucretini giriniz: \n");
-	scanf_s("%d", &otobanUcreti);
+    printf("Enter your daily toll fee: \n");
+    scanf_s("%d", &tollFee);
 
-	masraf = ((yol / 100) * benzinFiyat * ortalamaYakitTuketim) + parkUcreti + (otobanUcreti * 2);
+    cost = ((distance / 100) * fuelPrice * averageFuelConsumption) + parkingFee + (tollFee * 2);
 
-	printf("Bir gunluk ise gidis gelis masrafiniz: %d\n\n\n", masraf);
+    printf("Your daily commuting cost: %d\n\n\n", cost);
 
-	return 0;
-
+    return 0;
 }
