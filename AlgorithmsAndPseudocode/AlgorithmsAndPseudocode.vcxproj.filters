@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AlgorithmsAndPseudocode.cpp">
+    <ClCompile Include="AlgorithmsAndPseudocode.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
