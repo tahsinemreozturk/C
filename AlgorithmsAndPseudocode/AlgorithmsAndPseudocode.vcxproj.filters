@@ -18,5 +18,8 @@
     <ClCompile Include="AlgorithmsAndPseudocode.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ControlStructures.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

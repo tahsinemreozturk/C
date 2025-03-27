@@ -19,11 +19,4 @@ kolaylýkla dönüþütürülebilir. Birçok durumda bu sözde kod ifadeleri C karþýlýkla
 deðiþtirilerek yapýlýr.
 
 
-
-
-
-
-
-
-
 */
