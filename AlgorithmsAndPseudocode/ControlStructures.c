@@ -22,6 +22,23 @@ Oklar (Baðlantý) ---->  Þekiller arasýndaki akýþý gösterir.
 Daire (Baðlantý Noktasý) ----> Akýþ diyagramýnýn farklý bölümlerini 
 birbirine baðlar.
 
+Selection Expressions In C
+C' de üç tür seçim yapýsýnda sahiptir. if, if else ve switch.
+
+if seçim ifadesi eðer koþul doðruysa ya eylemi icra eder ya da koþul yanlýþ 
+ise eylemi atlar. 
+
+if else seçim ifadesi eðer koþul doðru ise eylemi icra eder ve yanlýþsa baþka
+bir eylem icra eder.
+
+switch seçim ifadesi ifadedeki deðere baðlý olarak çok sayýda farklý eylemden
+birini icra eder.
+
+Ýki farklý eylem arasýnda seçim yaptýðý için if...else ifadesine çift seçim
+ifadesi denir.
+Çok sayýda farklý eylem arasýndan seçim yaptýðý içim switch ifadesine çoklu 
+seçim ifadesi denir.
+
 
 
 
