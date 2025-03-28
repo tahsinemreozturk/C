@@ -22,7 +22,7 @@ Oklar (Baðlantý) ---->  Þekiller arasýndaki akýþý gösterir.
 Daire (Baðlantý Noktasý) ----> Akýþ diyagramýnýn farklý bölümlerini 
 birbirine baðlar.
 
-Selection Expressions In C
+##### --- Selection Expressions In C --- ##### 
 C' de üç tür seçim yapýsýnda sahiptir. if, if else ve switch.
 
 if seçim ifadesi eðer koþul doðruysa ya eylemi icra eder ya da koþul yanlýþ 
