@@ -39,6 +39,15 @@ ifadesi denir.
 Çok sayýda farklý eylem arasýndan seçim yaptýðý içim switch ifadesine çoklu 
 seçim ifadesi denir.
 
+##### --- Repetition statements in C --- ##### 
+C' de while, do...while ve for olmak üzere 3 tane tekrarlama ifadesi vardýr.
+
+Kontrol ifadelerini birleþtirmenin yalnýzca tek bir yolu - kontrol ifadesini
+kümeleme isimli yöntem - olduðunu öðreneceðiz. Bu nedenle, inþa edeceðimiz 
+herhangi bir C programý, sadece iki þekilde birleþtirilebilen yedi tür kontrol
+ifadesinden oluþturulabilir. Bu basitliðin özüdür.
+
+
 
 
 
