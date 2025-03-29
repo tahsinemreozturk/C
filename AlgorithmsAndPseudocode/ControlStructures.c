@@ -49,6 +49,55 @@ ifadesinden oluþturulabilir. Bu basitliðin özüdür.
 
 
 
+The If Statement
+Seçim ifadeleri, alternatif eylemler arasýndan seçim yapmak için kullanýlýrlar.
+Örneðin, bir sýnavdaki geçme notunun 50 olmasý gibi.
+
+{	Eðer öðrencinin notu 60' tan büyük veya eþitse
+		"Geçti" Yaz
+}
+Yukarýdaki sözde kod ifadesinde olduðu gibi öðrencinin notunun 60'tan büyük
+veya eþit olduðu koþulunun doðru mu yanlýþ mý olduðu kararlaþtýrýlýr. Koþul
+doðru ise Geçti yazýlýr ve sýradaki sözde kod ifadesi icra edilir. Koþul
+yanlýþsa yazma iþlemi göz ardý edilir ve sonraki sözde kod icra edilir.
+
+Bu isteðin C kodu:
+
+if (not >= 50) {
+	printf( "Gecti\n" );
+}
+þeklindedir. Sözde koda oldukça benzemektedir. 
+
+
+The If...Else Statement
+if seçim ifadesinin, yalnýzca koþul doðru olduðu zaman iþaret edilen eylemi yapar.
+diðer türlü eylem atlanarak geçilir. if...else seçim ifadesinde ise koþul 
+doðru olduðunda ve yanlýþ olduðunda yapýlacak farklý eylemleri icra eder.
+
+{	Eðer öðrencinin notu 60' tan büyük veya eþitse
+		"Geçti" Yaz
+	
+	Deðilse
+		"Kaldý" Yaz
+}
+
+C kodu:
+if (not >= 50) {
+	puts( "Gecti\n" );
+}
+else {
+	puts( "Kaldi" );
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
