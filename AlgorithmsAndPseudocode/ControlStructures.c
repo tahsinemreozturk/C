@@ -105,6 +105,7 @@ Bir koþullu ifadedeki ikinci ve üçüncü terim yürütülecek eylemler de olabilir.
 Örnek = grade >= 60 ? puts( "Passed" ) : puts( "Failed");
 Bu örnekte eðer not 60 da büyük veya eþitse Passed deðilse failed yazacak olan
 puts fonksiyonu yürütülecektir.
+
 Bu if....else ifadesi ile karýþtýrýlabilir. 
 if....else ifadesinin kullanýlmayacaðýný bazý yerlerde koþullu iþlemlerin
 kullanýlabileceðinizi ilerde öðreneceðiz.
