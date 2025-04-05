@@ -36,26 +36,26 @@
 
 */
 
-#include <stdio.h>
-
-int main(void)
-{
-	int sinifOrtalamasi;
-	int ToplamNot = 0;
-	unsigned int sayac = 1;
-	int not ;
-	
-	while (sayac <= 10) {
-		printf("Notunuzu giriniz: ");
-		scanf_s("%d", &not);
-		ToplamNot = ToplamNot + not;
-		sayac = sayac + 1;
-	}
-
-	sinifOrtalamasi = ToplamNot / 10;
-	printf("\nSinifin ortalamasi: %d\n\n", sinifOrtalamasi);
-
-}
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//	int sinifOrtalamasi;
+//	int ToplamNot = 0;
+//	unsigned int sayac = 1;
+//	int not ;
+//	
+//	while (sayac <= 10) {
+//		printf("Notunuzu giriniz: ");
+//		scanf_s("%d", &not);
+//		ToplamNot = ToplamNot + not;
+//		sayac = sayac + 1;
+//	}
+//
+//	sinifOrtalamasi = ToplamNot / 10;
+//	printf("\nSinifin ortalamasi: %d\n\n", sinifOrtalamasi);
+//
+//}
 
 /*
 totlade deðerlerin toplamýný sakladýk. counterý sayma için kullandýk. Yani
