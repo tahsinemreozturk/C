@@ -76,5 +76,7 @@ deðiþkenimize bir deðer atamazsak, eskide kalan deðer yeni deðiþkenimizin
 olur.
 
 
+Not: Eðer bir sayaç veya toplama baþlangýç deðeri verilmezse, programýn
+sonucu muhtemelen yanlýþ olacaktýr. Bu, bir mantýk hatasýdýr.
 
 */
