@@ -42,7 +42,7 @@ int main(void)
 {
 	int sinifOrtalamasi;
 	int ToplamNot = 0;
-	int sayac = 1;
+	unsigned int sayac = 1;
 	int not ;
 	
 	while (sayac <= 10) {
@@ -56,3 +56,25 @@ int main(void)
 	printf("\nSinifin ortalamasi: %d\n\n", sinifOrtalamasi);
 
 }
+
+/*
+totlade deðerlerin toplamýný sakladýk. counterý sayma için kullandýk. Yani
+girilen notlarýn sayýsýný saymak için. Bu da 10 olduðunda artýk döngüye 
+girmemeyi saðladý.
+Sayacý unsigned int yapmamýn sebebi hiçbir zaman negatif deðer almadýðý için.
+
+Toplamý saklamak için kullanýlan deðiþkenlere normalde, program içerisinde
+kullanýlmadan önce baþlangýç deðeri olarak 0 verili; diðer türlü toplam,
+totalin hafýza bölgesindeki önceki deðeri de içerecektir.
+
+Sayaç kullanýmýna göre baþlangýçta 0 veya 1 verilir. 
+
+Baþlangýç deðeri verilmemiþ bir deðiþken "GEREKSÝZ" bir deðiþken içerir - 
+bu deðiþken ayrýlmýþ hafýza bölgesinde saklanmýþ son deðerdir. Yani daha 
+önce o hafýza bölgesinde bir deðer varmýþ ve orada kalmýþþsa, biz yeni 
+deðiþkenimize bir deðer atamazsak, eskide kalan deðer yeni deðiþkenimizin 
+olur.
+
+
+
+*/
