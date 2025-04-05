@@ -24,5 +24,8 @@
     <ClCompile Include="RepeatWhileLoop.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CounterControlledRepetition.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
