@@ -27,5 +27,8 @@
     <ClCompile Include="CounterControlledRepetition.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TerminationControlledRepetition.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
