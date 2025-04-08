@@ -1,4 +1,9 @@
 /*
+
+
+* Kod örneði en aþaðýdadýr
+
+
 Yukarýdan aþaðý, adým adým düzenleyerek algoritmalarýn formüle 
 edilmesi. 2. Olarak sonlandýrma kontrollü tekrarlama ile 
 yapýlabilir.
@@ -115,6 +120,51 @@ olur. Genelde programýn çökmesi olarak adlandýrýlýr.
 14)		"Hiç bir not girilmeiþtir" yaz
 
 
-
-
 */
+
+#include <stdio.h>
+
+int main(void)
+{
+	unsigned int counter;; // sayac
+	int grade; //girilecek not
+	int total; //girilen notlarin toplami
+	
+	float average; //notlarin ortalamasi (float = ondalikli sayilari tutar
+
+	//baslangic kismi
+	total = 0; //total'in baslangic degerini 0 yapar
+	counter = 0; //sayac'in baslangic degerini 0 yapar
+
+
+	//islem kismi
+	//kullanicidan ilk notun alinmasi
+	printf("%s", "Enter grade, -1 to end: "); //not girisini ister
+	scanf_s("%d", &grade); //girilen degeri okur
+
+
+	//kullanicidan henuz sonlandirma degeri girilmediyse donguye gir
+	while (grade != -1)
+	{
+		total = total + grade;
+		counter = counter + 1;
+
+		//hala dongudeyken kullanicidan sonraki notu al
+		printf("%s", "Enter grade, -1 to end: ");
+		scanf_s("%d", &grade); 
+	}
+
+	//sonlandirma kismi
+	//kullanici en az bir not girdiyse
+	if (counter != 0)
+	{
+		//girilen tum notlar icin ortalamayi hesapla
+		average = (float)total / counter; //ondalik kismin atilmasini engelle
+
+		//ortalamayi virgulden sonra iki basamak icin goster
+		printf("\n###### RESULT ######\nClass average is %.2f\n", average);
+	}
+	else {//hicbir not girilmediyse
+		puts("\n###### RESULT ######\nNo grades were entered");
+	}
+}
