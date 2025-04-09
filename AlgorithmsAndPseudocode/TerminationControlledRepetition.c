@@ -122,49 +122,116 @@ olur. Genelde programýn çökmesi olarak adlandýrýlýr.
 
 */
 
-#include <stdio.h>
+//#include <stdio.h>
+//
+//int main(void)
+//{
+//	unsigned int counter;; // sayac
+//	int grade; //girilecek not
+//	int total; //girilen notlarin toplami
+//	
+//	float average; //notlarin ortalamasi (float = ondalikli sayilari tutar
+//
+//	//baslangic kismi
+//	total = 0; //total'in baslangic degerini 0 yapar
+//	counter = 0; //sayac'in baslangic degerini 0 yapar
+//
+//
+//	//islem kismi
+//	//kullanicidan ilk notun alinmasi
+//	printf("%s", "Enter grade, -1 to end: "); //not girisini ister
+//	scanf_s("%d", &grade); //girilen degeri okur
+//
+//
+//	//kullanicidan henuz sonlandirma degeri girilmediyse donguye gir
+//	while (grade != -1)
+//	{
+//		total = total + grade;
+//		counter = counter + 1;
+//
+//		//hala dongudeyken kullanicidan sonraki notu al
+//		printf("%s", "Enter grade, -1 to end: ");
+//		scanf_s("%d", &grade); 
+//	}
+//
+//	//sonlandirma kismi
+//	//kullanici en az bir not girdiyse
+//	if (counter != 0)
+//	{
+//		//girilen tum notlar icin ortalamayi hesapla
+//		average = (float)total / counter; //ondalik kismin atilmasini engelle
+//
+//		//ortalamayi virgulden sonra iki basamak icin goster
+//		printf("\n###### RESULT ######\nClass average is %.2f\n", average);
+//	}
+//	else {//hicbir not girilmediyse
+//		puts("\n###### RESULT ######\nNo grades were entered");
+//	}
+//}
 
-int main(void)
-{
-	unsigned int counter;; // sayac
-	int grade; //girilecek not
-	int total; //girilen notlarin toplami
-	
-	float average; //notlarin ortalamasi (float = ondalikli sayilari tutar
-
-	//baslangic kismi
-	total = 0; //total'in baslangic degerini 0 yapar
-	counter = 0; //sayac'in baslangic degerini 0 yapar
 
 
-	//islem kismi
-	//kullanicidan ilk notun alinmasi
-	printf("%s", "Enter grade, -1 to end: "); //not girisini ister
-	scanf_s("%d", &grade); //girilen degeri okur
+/*
+Örnek koddaki while gibi eðer birden fazla ifadeyi while içerisinde yürütmek istersek
+küme parantezlerini kullanmak zorunludur. Parantezler kullanýlmadýðýnda, döngü gövedsindeki
+ilk ifade haricindekiler döngü dýþýnda kalýr. 
+
+Eðer yukarýdaki örnek kodda while'ý küme parantezleri ile kullanmasaydýk sonsuz döngü
+oluþacaktý. Bu da eðer kullanýcý ilk notu -1 olarak girmeseydi sonsuz döngüye takýlýp,
+programýn hata vermesine neden olacaktý.
 
 
-	//kullanicidan henuz sonlandirma degeri girilmediyse donguye gir
-	while (grade != -1)
-	{
-		total = total + grade;
-		counter = counter + 1;
++++++ TÜRLER ARASINDA AÇIK VE DOLAYLI DÖNÜÞÜM +++++
 
-		//hala dongudeyken kullanicidan sonraki notu al
-		printf("%s", "Enter grade, -1 to end: ");
-		scanf_s("%d", &grade); 
-	}
+Hesaplamamýzýn kesirli kýsmýný yakalamak için average deðiþkenini float türünden
+tanýmlamýþtýk. Bununla birlikte total ve counter deðiþkenleri de int türünden olduðu
+için total / counter iþleminin sonucu da tam sayý olacaktýr. Yani average float olsa 
+da bölme iþlemindeki deðiþkenler int olduðu için sonucun virgüllü kýsýmlarý kaybolacaktýr.
+Tam sayý deðerlerle, bir ondalýk hesaplama üretmek için, ondalýk sayý olan geçici
+deðerler oluþturmak zorundayýz. C' de bu görevi yapan tür dönüþtürme iþlemi saðlar.
 
-	//sonlandirma kismi
-	//kullanici en az bir not girdiyse
-	if (counter != 0)
-	{
-		//girilen tum notlar icin ortalamayi hesapla
-		average = (float)total / counter; //ondalik kismin atilmasini engelle
+average = (float) total / counter;
 
-		//ortalamayi virgulden sonra iki basamak icin goster
-		printf("\n###### RESULT ######\nClass average is %.2f\n", average);
-	}
-	else {//hicbir not girilmediyse
-		puts("\n###### RESULT ######\nNo grades were entered");
-	}
-}
+total teriminin geçici bir ondalýk kopyasýný oluþturan (float) tür dönüþtürme iþlemi
+içerir. Tür dönüþtürme iþleminin bu þekilde kullanýmýna açýk dönüþüm denir. Hesaplama
+þimdi, counter' da saklanan unsigned int deðiþkenine bölünen ondalýk bir deðer 
+(total'in geçici float hali) içerir. C, yalnýzca terimlerin veri türleri ayný olan
+aritmetik iþlemleri gerçekleþtirir. Terimlerin ayný türden olmasýný saðlamak için,
+derleyici sçeilmiþ terimler üzerinde dolaylý dönüþüm denen bir iþlem yapar. 
+Örneðin, unsigned int ve float veri türleri içeren bir ifade de, unsigned int terim-
+lerinin kopyalarý yapýlýr ve float'a dönüþtürülür. Örneðimizde, counter' ýn bir
+kopyasý yapýldýktan ve float'a dönüþtürüldükten sonra hesaplama icra edilir ve ondalýk
+bölmenin sonucu average'a aktarýlýr. C'de farklý türlerden terimlerin dönüþümleri
+için bir dizi kurallar vardýr. Bunlardan ilerde daha fazla bahesedeceðiz.
+
+
+
+(float) total gibi dönüþümlere açýk (explicit) tür dönüþümü denir. 
+Bunu kendimiz  yazarýz.
+
+total float olunca, counter'ýn float’a dönüþtürülmesine ise dolaylý (implicit)
+tür dönüþümü denir. Bu dönüþümü C derleyicisi otomatik yapar.
+
+
+Tür dönüþüm iþlemi çoðu veri tipine uygulanýr - tür ismi etrafýnda parantez koyarak
+oluþturulur. Her bir tür dönüþüm iþlemi tekil bir iþlemdir, yani tek bir terimi olan
+bir iþlemdir. C, ayný zamanda artý (+) ve eksi (-) iþlemlerinin tekil hallerini de
+destekler, böylece -10 veya +11 gibi ifadeler  yazabiliriz. 
+Tür dönüþüm iþlemleri saðdan sola doðru yapýlýr ve tekil + ve tekil - gibi diðer
+tekil iþlemlerle ayný önceliðe sahiptir. Bu öncelik *,/ ve % çarpýmsal iþlemlerinin-
+kinden daha yüksektir. 
+
+Yani bir sayýnýn negatif mi pozitif mi olduðu belirten - ve + iþaretinin öncelikli
+olmasý gerekir ki bir iþlem içerisinde sayýnýn pozitif mi negatif mi olduðu önceden
+belirlenmiþ olsun ve de ona göre iþlem yapýlsýn.
+
+
+
+
+
+
+
+
+
+
+*/
