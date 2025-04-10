@@ -1,123 +1,123 @@
-/*
+ï»¿/*
 
 
-* Kod örneği en aşağıdadır
+* Kod Ã¶rneÄŸi en aÅŸaÄŸÄ±dadÄ±r
 
 
-Yukarıdan aşağı, adım adım düzenleyerek algoritmaların formüle 
-edilmesi. 2. Olarak sonlandırma kontrollü tekrarlama ile 
-yapılabilir.
+YukarÄ±dan aÅŸaÄŸÄ±, adÄ±m adÄ±m dÃ¼zenleyerek algoritmalarÄ±n formÃ¼le 
+edilmesi. 2. Olarak sonlandÄ±rma kontrollÃ¼ tekrarlama ile 
+yapÄ±labilir.
 
-Yine bir sınıfta alınan notların sınıf ortalamasının hesaplanacağı
-program yazılması gereksin. Ama bu sefer kaç tane not girileceğini
-bilmezsek programı nasıl yazabiliriz ?
-Yani tekrarlı işlemin kaç defa edeceğini önceden bilmediğimiz 
+Yine bir sÄ±nÄ±fta alÄ±nan notlarÄ±n sÄ±nÄ±f ortalamasÄ±nÄ±n hesaplanacaÄŸÄ±
+program yazÄ±lmasÄ± gereksin. Ama bu sefer kaÃ§ tane not girileceÄŸini
+bilmezsek programÄ± nasÄ±l yazabiliriz ?
+Yani tekrarlÄ± iÅŸlemin kaÃ§ defa edeceÄŸini Ã¶nceden bilmediÄŸimiz 
 zamanlarda ne yapabiliriz ? 
 
-Kullanıcıya döngüyü sonlandıran bir değer bilgisini veririz. Bu 
-sayede kullanıcı tekrarladığı işlemin sonuna geldiğinde yani yeni
-bir not girmeyeceği zaman bu değeri girerek tekrarlamayı sonlandırır.
+KullanÄ±cÄ±ya dÃ¶ngÃ¼yÃ¼ sonlandÄ±ran bir deÄŸer bilgisini veririz. Bu 
+sayede kullanÄ±cÄ± tekrarladÄ±ÄŸÄ± iÅŸlemin sonuna geldiÄŸinde yani yeni
+bir not girmeyeceÄŸi zaman bu deÄŸeri girerek tekrarlamayÄ± sonlandÄ±rÄ±r.
 
-Tabi dikkat edilmesi gereken önemli bir şey de; Sonlandırma ifadesinin
-normalde girilebilecekl değerler kümesinde olmaması gerekir.
+Tabi dikkat edilmesi gereken Ã¶nemli bir ÅŸey de; SonlandÄ±rma ifadesinin
+normalde girilebilecekl deÄŸerler kÃ¼mesinde olmamasÄ± gerekir.
 
-Örnek olarak not girilen bir uygulamada, sonlandırma değeri 5 seçilirse ve
+Ã–rnek olarak not girilen bir uygulamada, sonlandÄ±rma deÄŸeri 5 seÃ§ilirse ve
 girilen notlardan biri de 5 olursa bu sefer program sonlanacak ve 
-istenen işlem olması gerektiği gibi sonuç veremeyecektir. Bu durumlarda
-mantıklı olan notlandırma içersininde olmayan bir değeri sonlandırma
-ifadesi olarak tanımlamaktır. Mesela notların (0-100 olduğu bir sınavda)
--5 bir sonlandırma değeri olarak kullanılabilir.
+istenen iÅŸlem olmasÄ± gerektiÄŸi gibi sonuÃ§ veremeyecektir. Bu durumlarda
+mantÄ±klÄ± olan notlandÄ±rma iÃ§ersininde olmayan bir deÄŸeri sonlandÄ±rma
+ifadesi olarak tanÄ±mlamaktÄ±r. Mesela notlarÄ±n (0-100 olduÄŸu bir sÄ±navda)
+-5 bir sonlandÄ±rma deÄŸeri olarak kullanÄ±labilir.
 
 Not: Bu tarz durumlara Belirsiz Tekrarlama denir.
 
 
-#### YUKARIDAN AŞAĞIYA ADIM ADIM DÜZENLEME ####
+#### YUKARIDAN AÅAÄIYA ADIM ADIM DÃœZENLEME ####
 
-Üst kısmı temsil eden sözde kod ifadesi ile programın sözde kod yazımına başlıyoruz.
+Ãœst kÄ±smÄ± temsil eden sÃ¶zde kod ifadesi ile programÄ±n sÃ¶zde kod yazÄ±mÄ±na baÅŸlÄ±yoruz.
 
-Sınav için sınıf ortalamasını belirle
+SÄ±nav iÃ§in sÄ±nÄ±f ortalamasÄ±nÄ± belirle
 
-Üst, programın genel fonksiyonunu taşıyan tek bir ifadedir. Maalesef, üst nadirden
-C programı yazmak için yeterli miktarda detay içerir. Bunun için düzenleme sürecinde
-başlarız. Üstü, bir dizi daha küçük görevlere ayırırız ve bunları hangi sırada icra
-edilmesi gerekiyorsa o sırada belirtiriz. Bu da ilk aşağıdaki gibi sonuçlanır.
+Ãœst, programÄ±n genel fonksiyonunu taÅŸÄ±yan tek bir ifadedir. Maalesef, Ã¼st nadirden
+C programÄ± yazmak iÃ§in yeterli miktarda detay iÃ§erir. Bunun iÃ§in dÃ¼zenleme sÃ¼recinde
+baÅŸlarÄ±z. ÃœstÃ¼, bir dizi daha kÃ¼Ã§Ã¼k gÃ¶revlere ayÄ±rÄ±rÄ±z ve bunlarÄ± hangi sÄ±rada icra
+edilmesi gerekiyorsa o sÄ±rada belirtiriz. Bu da ilk aÅŸaÄŸÄ±daki gibi sonuÃ§lanÄ±r.
 
-Değişkenlere başlangıç değeri ata
-Sınav notlarını gir, topla ve say
-Sınıf ortalamasını hesapla ve yaz
+DeÄŸiÅŸkenlere baÅŸlangÄ±Ã§ deÄŸeri ata
+SÄ±nav notlarÄ±nÄ± gir, topla ve say
+SÄ±nÄ±f ortalamasÄ±nÄ± hesapla ve yaz
 
-Burada yalnızca sıralı yapı kullanılmıştır - listelenmiş adımlar biri diğerinden
-sonra olacak şekilde sırayla yürütülecektir. 
+Burada yalnÄ±zca sÄ±ralÄ± yapÄ± kullanÄ±lmÄ±ÅŸtÄ±r - listelenmiÅŸ adÄ±mlar biri diÄŸerinden
+sonra olacak ÅŸekilde sÄ±rayla yÃ¼rÃ¼tÃ¼lecektir. 
 
-Not: Üst kısmın yanı sıra, aslında her bir düzenleme algoritmanın tam bir 
-tanımlamasıdır; sadece detay seviyeleri farklılık gösterir. 
-
-
-2. DÜZENLEME
-
-2. düzenleme seviyesine ilerlemek için, özel değişkenleri belirtiriz. Sayıların peşpeşe
-toplamına, kaç tane sayının işlendiği sayımına, giriş olarak her bir notun değerini
-alan bir değişken ve hesaplanmış ortalamayı tutan bir değişkene ihtiyacımız olacak.
-
-Değişkenlere başlangıç değeri ata ----> bu sözde kod alağıdaki gibi düzenlenebilir.
-
-Başlangıç değeri olarak toplama sıfır ata
-Başlangıç değeri olarak sayaca sıfır ata
-
-Not: Yalnızca toplam ve sayaca sıfır değeri atadık. Çünkü diğerleri için bu önemsizdir.
-Yok edici okuma işlemi ile diğerlerinin üzerine yeni değerler yazılacağı için, eski 
-değerlerinin önemi yoktur. 
+Not: Ãœst kÄ±smÄ±n yanÄ± sÄ±ra, aslÄ±nda her bir dÃ¼zenleme algoritmanÄ±n tam bir 
+tanÄ±mlamasÄ±dÄ±r; sadece detay seviyeleri farklÄ±lÄ±k gÃ¶sterir. 
 
 
-Sınav için notlarını gir, topla ve say -----> Bu sözde kod ifadesi ardışık olarak
+2. DÃœZENLEME
 
-her bir notu giren bir tekrarlama yapısına gerek duyar. Önceden kaç tane notun 
-işleneceğini bilmediğimiz için, sonlandırma kontrollü tekrarlama kullanacağız. 
-Program, her bir not girildikten sonra bu değerle karşılaştırılacak ve sonlandırma
-değeri girildiği zaman döngüyü sonlandıracaktır. 
+2. dÃ¼zenleme seviyesine ilerlemek iÃ§in, Ã¶zel deÄŸiÅŸkenleri belirtiriz. SayÄ±larÄ±n peÅŸpeÅŸe
+toplamÄ±na, kaÃ§ tane sayÄ±nÄ±n iÅŸlendiÄŸi sayÄ±mÄ±na, giriÅŸ olarak her bir notun deÄŸerini
+alan bir deÄŸiÅŸken ve hesaplanmÄ±ÅŸ ortalamayÄ± tutan bir deÄŸiÅŸkene ihtiyacÄ±mÄ±z olacak.
 
-Yukarıdaki sözde kod ifadesini aşağıdaki gibi düzenleyeliö
+DeÄŸiÅŸkenlere baÅŸlangÄ±Ã§ deÄŸeri ata ----> bu sÃ¶zde kod alaÄŸÄ±daki gibi dÃ¼zenlenebilir.
 
-İlk notu gir
-Kullanıcı sonlandırmayı henüz girmediyse
-	Bu notu işleyen toplama ekle
-	Not sayacına bir ekle
-	Sonraki notu gir (sonlandırma olması mümkün)
+BaÅŸlangÄ±Ã§ deÄŸeri olarak toplama sÄ±fÄ±r ata
+BaÅŸlangÄ±Ã§ deÄŸeri olarak sayaca sÄ±fÄ±r ata
 
-
-Görüldüğü gibi sözde kod ifadesinde while için süslü parantez kullanmadık. Ama while'a
-ait olduğunu göstermek için bunlar için bir satır boşluk bıraktık. 
-
-Sınıf ortalamasını hesapla ve yaz -----> sözde kodu aşağıdaki gibi düzenleyelim.
-
-Sayaç sıfıra eşit değilse
-	Ortalamaya toplamın sayaca bölümüne eşitle
-	Ortalamayı yaz
-Değilse
-	"Hiç bir not girilmemiştir" yaz
+Not: YalnÄ±zca toplam ve sayaca sÄ±fÄ±r deÄŸeri atadÄ±k. Ã‡Ã¼nkÃ¼ diÄŸerleri iÃ§in bu Ã¶nemsizdir.
+Yok edici okuma iÅŸlemi ile diÄŸerlerinin Ã¼zerine yeni deÄŸerler yazÄ±lacaÄŸÄ± iÃ§in, eski 
+deÄŸerlerinin Ã¶nemi yoktur. 
 
 
-Not: Burada, sıfıra bölme- eğer farkedilmezse programın başarısız olmasına sebep
-olur. Genelde programın çökmesi olarak adlandırılır. 
+SÄ±nav iÃ§in notlarÄ±nÄ± gir, topla ve say -----> Bu sÃ¶zde kod ifadesi ardÄ±ÅŸÄ±k olarak
+
+her bir notu giren bir tekrarlama yapÄ±sÄ±na gerek duyar. Ã–nceden kaÃ§ tane notun 
+iÅŸleneceÄŸini bilmediÄŸimiz iÃ§in, sonlandÄ±rma kontrollÃ¼ tekrarlama kullanacaÄŸÄ±z. 
+Program, her bir not girildikten sonra bu deÄŸerle karÅŸÄ±laÅŸtÄ±rÄ±lacak ve sonlandÄ±rma
+deÄŸeri girildiÄŸi zaman dÃ¶ngÃ¼yÃ¼ sonlandÄ±racaktÄ±r. 
+
+YukarÄ±daki sÃ¶zde kod ifadesini aÅŸaÄŸÄ±daki gibi dÃ¼zenleyeliÃ¶
+
+Ä°lk notu gir
+KullanÄ±cÄ± sonlandÄ±rmayÄ± henÃ¼z girmediyse
+	Bu notu iÅŸleyen toplama ekle
+	Not sayacÄ±na bir ekle
+	Sonraki notu gir (sonlandÄ±rma olmasÄ± mÃ¼mkÃ¼n)
 
 
-####  SÖZDE KODUN TAMAMI  #### (son hali)
+GÃ¶rÃ¼ldÃ¼ÄŸÃ¼ gibi sÃ¶zde kod ifadesinde while iÃ§in sÃ¼slÃ¼ parantez kullanmadÄ±k. Ama while'a
+ait olduÄŸunu gÃ¶stermek iÃ§in bunlar iÃ§in bir satÄ±r boÅŸluk bÄ±raktÄ±k. 
+
+SÄ±nÄ±f ortalamasÄ±nÄ± hesapla ve yaz -----> sÃ¶zde kodu aÅŸaÄŸÄ±daki gibi dÃ¼zenleyelim.
+
+SayaÃ§ sÄ±fÄ±ra eÅŸit deÄŸilse
+	Ortalamaya toplamÄ±n sayaca bÃ¶lÃ¼mÃ¼ne eÅŸitle
+	OrtalamayÄ± yaz
+DeÄŸilse
+	"HiÃ§ bir not girilmemiÅŸtir" yaz
 
 
-1)  Başlangıç değeri olarak toplama sıfır ata
-2)  Başlangıç değeri olarak sayaca sıfır ata
+Not: Burada, sÄ±fÄ±ra bÃ¶lme- eÄŸer farkedilmezse programÄ±n baÅŸarÄ±sÄ±z olmasÄ±na sebep
+olur. Genelde programÄ±n Ã§Ã¶kmesi olarak adlandÄ±rÄ±lÄ±r. 
+
+
+####  SÃ–ZDE KODUN TAMAMI  #### (son hali)
+
+
+1)  BaÅŸlangÄ±Ã§ deÄŸeri olarak toplama sÄ±fÄ±r ata
+2)  BaÅŸlangÄ±Ã§ deÄŸeri olarak sayaca sÄ±fÄ±r ata
 3)
-4)  İlk notu gir
-5)  Kullanıcı sonlandırmayı henüz girmediyse
-6)		Bu notu işleyen toplama ekle
-7)		Not sayacına bir ekle
-8)		Sonraki notu gir (sonladırma olması mümkün)
+4)  Ä°lk notu gir
+5)  KullanÄ±cÄ± sonlandÄ±rmayÄ± henÃ¼z girmediyse
+6)		Bu notu iÅŸleyen toplama ekle
+7)		Not sayacÄ±na bir ekle
+8)		Sonraki notu gir (sonladÄ±rma olmasÄ± mÃ¼mkÃ¼n)
 9)
-10)  Sayaca sıfır eşit değilse
-11)		Ortalamayı toplamın sayaca bölümüne eşitle
-12)		Ortalamayı yaz
-13)  Değilse
-14)		"Hiç bir not girilmeiştir" yaz
+10)  Sayaca sÄ±fÄ±r eÅŸit deÄŸilse
+11)		OrtalamayÄ± toplamÄ±n sayaca bÃ¶lÃ¼mÃ¼ne eÅŸitle
+12)		OrtalamayÄ± yaz
+13)  DeÄŸilse
+14)		"HiÃ§ bir not girilmeiÅŸtir" yaz
 
 
 */
@@ -172,60 +172,77 @@ olur. Genelde programın çökmesi olarak adlandırılır.
 
 
 /*
-Örnek koddaki while gibi eğer birden fazla ifadeyi while içerisinde yürütmek istersek
-küme parantezlerini kullanmak zorunludur. Parantezler kullanılmadığında, döngü gövedsindeki
-ilk ifade haricindekiler döngü dışında kalır. 
+Ã–rnek koddaki while gibi eÄŸer birden fazla ifadeyi while iÃ§erisinde yÃ¼rÃ¼tmek istersek
+kÃ¼me parantezlerini kullanmak zorunludur. Parantezler kullanÄ±lmadÄ±ÄŸÄ±nda, dÃ¶ngÃ¼ gÃ¶vedsindeki
+ilk ifade haricindekiler dÃ¶ngÃ¼ dÄ±ÅŸÄ±nda kalÄ±r. 
 
-Eğer yukarıdaki örnek kodda while'ı küme parantezleri ile kullanmasaydık sonsuz döngü
-oluşacaktı. Bu da eğer kullanıcı ilk notu -1 olarak girmeseydi sonsuz döngüye takılıp,
-programın hata vermesine neden olacaktı.
+EÄŸer yukarÄ±daki Ã¶rnek kodda while'Ä± kÃ¼me parantezleri ile kullanmasaydÄ±k sonsuz dÃ¶ngÃ¼
+oluÅŸacaktÄ±. Bu da eÄŸer kullanÄ±cÄ± ilk notu -1 olarak girmeseydi sonsuz dÃ¶ngÃ¼ye takÄ±lÄ±p,
+programÄ±n hata vermesine neden olacaktÄ±.
 
 
-+++++ TÜRLER ARASINDA AÇIK VE DOLAYLI DÖNÜŞÜM +++++
++++++ TÃœRLER ARASINDA AÃ‡IK VE DOLAYLI DÃ–NÃœÅÃœM +++++
 
-Hesaplamamızın kesirli kısmını yakalamak için average değişkenini float türünden
-tanımlamıştık. Bununla birlikte total ve counter değişkenleri de int türünden olduğu
-için total / counter işleminin sonucu da tam sayı olacaktır. Yani average float olsa 
-da bölme işlemindeki değişkenler int olduğu için sonucun virgüllü kısımları kaybolacaktır.
-Tam sayı değerlerle, bir ondalık hesaplama üretmek için, ondalık sayı olan geçici
-değerler oluşturmak zorundayız. C' de bu görevi yapan tür dönüştürme işlemi sağlar.
+HesaplamamÄ±zÄ±n kesirli kÄ±smÄ±nÄ± yakalamak iÃ§in average deÄŸiÅŸkenini float tÃ¼rÃ¼nden
+tanÄ±mlamÄ±ÅŸtÄ±k. Bununla birlikte total ve counter deÄŸiÅŸkenleri de int tÃ¼rÃ¼nden olduÄŸu
+iÃ§in total / counter iÅŸleminin sonucu da tam sayÄ± olacaktÄ±r. Yani average float olsa 
+da bÃ¶lme iÅŸlemindeki deÄŸiÅŸkenler int olduÄŸu iÃ§in sonucun virgÃ¼llÃ¼ kÄ±sÄ±mlarÄ± kaybolacaktÄ±r.
+Tam sayÄ± deÄŸerlerle, bir ondalÄ±k hesaplama Ã¼retmek iÃ§in, ondalÄ±k sayÄ± olan geÃ§ici
+deÄŸerler oluÅŸturmak zorundayÄ±z. C' de bu gÃ¶revi yapan tÃ¼r dÃ¶nÃ¼ÅŸtÃ¼rme iÅŸlemi saÄŸlar.
 
 average = (float) total / counter;
 
-total teriminin geçici bir ondalık kopyasını oluşturan (float) tür dönüştürme işlemi
-içerir. Tür dönüştürme işleminin bu şekilde kullanımına açık dönüşüm denir. Hesaplama
-şimdi, counter' da saklanan unsigned int değişkenine bölünen ondalık bir değer 
-(total'in geçici float hali) içerir. C, yalnızca terimlerin veri türleri aynı olan
-aritmetik işlemleri gerçekleştirir. Terimlerin aynı türden olmasını sağlamak için,
-derleyici sçeilmiş terimler üzerinde dolaylı dönüşüm denen bir işlem yapar. 
-Örneğin, unsigned int ve float veri türleri içeren bir ifade de, unsigned int terim-
-lerinin kopyaları yapılır ve float'a dönüştürülür. Örneğimizde, counter' ın bir
-kopyası yapıldıktan ve float'a dönüştürüldükten sonra hesaplama icra edilir ve ondalık
-bölmenin sonucu average'a aktarılır. C'de farklı türlerden terimlerin dönüşümleri
-için bir dizi kurallar vardır. Bunlardan ilerde daha fazla bahesedeceğiz.
+total teriminin geÃ§ici bir ondalÄ±k kopyasÄ±nÄ± oluÅŸturan (float) tÃ¼r dÃ¶nÃ¼ÅŸtÃ¼rme iÅŸlemi
+iÃ§erir. TÃ¼r dÃ¶nÃ¼ÅŸtÃ¼rme iÅŸleminin bu ÅŸekilde kullanÄ±mÄ±na aÃ§Ä±k dÃ¶nÃ¼ÅŸÃ¼m denir. Hesaplama
+ÅŸimdi, counter' da saklanan unsigned int deÄŸiÅŸkenine bÃ¶lÃ¼nen ondalÄ±k bir deÄŸer 
+(total'in geÃ§ici float hali) iÃ§erir. C, yalnÄ±zca terimlerin veri tÃ¼rleri aynÄ± olan
+aritmetik iÅŸlemleri gerÃ§ekleÅŸtirir. Terimlerin aynÄ± tÃ¼rden olmasÄ±nÄ± saÄŸlamak iÃ§in,
+derleyici sÃ§eilmiÅŸ terimler Ã¼zerinde dolaylÄ± dÃ¶nÃ¼ÅŸÃ¼m denen bir iÅŸlem yapar. 
+Ã–rneÄŸin, unsigned int ve float veri tÃ¼rleri iÃ§eren bir ifade de, unsigned int terim-
+lerinin kopyalarÄ± yapÄ±lÄ±r ve float'a dÃ¶nÃ¼ÅŸtÃ¼rÃ¼lÃ¼r. Ã–rneÄŸimizde, counter' Ä±n bir
+kopyasÄ± yapÄ±ldÄ±ktan ve float'a dÃ¶nÃ¼ÅŸtÃ¼rÃ¼ldÃ¼kten sonra hesaplama icra edilir ve ondalÄ±k
+bÃ¶lmenin sonucu average'a aktarÄ±lÄ±r. C'de farklÄ± tÃ¼rlerden terimlerin dÃ¶nÃ¼ÅŸÃ¼mleri
+iÃ§in bir dizi kurallar vardÄ±r. Bunlardan ilerde daha fazla bahesedeceÄŸiz.
 
 
 
-(float) total gibi dönüşümlere açık (explicit) tür dönüşümü denir. 
-Bunu kendimiz  yazarız.
+(float) total gibi dÃ¶nÃ¼ÅŸÃ¼mlere aÃ§Ä±k (explicit) tÃ¼r dÃ¶nÃ¼ÅŸÃ¼mÃ¼ denir. 
+Bunu kendimiz  yazarÄ±z.
 
-total float olunca, counter'ın float’a dönüştürülmesine ise dolaylı (implicit)
-tür dönüşümü denir. Bu dönüşümü C derleyicisi otomatik yapar.
-
-
-Tür dönüşüm işlemi çoğu veri tipine uygulanır - tür ismi etrafında parantez koyarak
-oluşturulur. Her bir tür dönüşüm işlemi tekil bir işlemdir, yani tek bir terimi olan
-bir işlemdir. C, aynı zamanda artı (+) ve eksi (-) işlemlerinin tekil hallerini de
-destekler, böylece -10 veya +11 gibi ifadeler  yazabiliriz. 
-Tür dönüşüm işlemleri sağdan sola doğru yapılır ve tekil + ve tekil - gibi diğer
-tekil işlemlerle aynı önceliğe sahiptir. Bu öncelik *,/ ve % çarpımsal işlemlerinin-
-kinden daha yüksektir. 
-
-Yani bir sayının negatif mi pozitif mi olduğu belirten - ve + işaretinin öncelikli
-olması gerekir ki bir işlem içerisinde sayının pozitif mi negatif mi olduğu önceden
-belirlenmiş olsun ve de ona göre işlem yapılsın.
+total float olunca, counter'Ä±n floatâ€™a dÃ¶nÃ¼ÅŸtÃ¼rÃ¼lmesine ise dolaylÄ± (implicit)
+tÃ¼r dÃ¶nÃ¼ÅŸÃ¼mÃ¼ denir. Bu dÃ¶nÃ¼ÅŸÃ¼mÃ¼ C derleyicisi otomatik yapar.
 
 
+TÃ¼r dÃ¶nÃ¼ÅŸÃ¼m iÅŸlemi Ã§oÄŸu veri tipine uygulanÄ±r - tÃ¼r ismi etrafÄ±nda parantez koyarak
+oluÅŸturulur. Her bir tÃ¼r dÃ¶nÃ¼ÅŸÃ¼m iÅŸlemi tekil bir iÅŸlemdir, yani tek bir terimi olan
+bir iÅŸlemdir. C, aynÄ± zamanda artÄ± (+) ve eksi (-) iÅŸlemlerinin tekil hallerini de
+destekler, bÃ¶ylece -10 veya +11 gibi ifadeler  yazabiliriz. 
+TÃ¼r dÃ¶nÃ¼ÅŸÃ¼m iÅŸlemleri saÄŸdan sola doÄŸru yapÄ±lÄ±r ve tekil + ve tekil - gibi diÄŸer
+tekil iÅŸlemlerle aynÄ± Ã¶nceliÄŸe sahiptir. Bu Ã¶ncelik *,/ ve % Ã§arpÄ±msal iÅŸlemlerinin-
+kinden daha yÃ¼ksektir. 
+
+Yani bir sayÄ±nÄ±n negatif mi pozitif mi olduÄŸu belirten - ve + iÅŸaretinin Ã¶ncelikli
+olmasÄ± gerekir ki bir iÅŸlem iÃ§erisinde sayÄ±nÄ±n pozitif mi negatif mi olduÄŸu Ã¶nceden
+belirlenmiÅŸ olsun ve de ona gÃ¶re iÅŸlem yapÄ±lsÄ±n.
+
+
+
++++++ ONDALIK SAYILARI BÄ°Ã‡Ä°MLENDÄ°RME +++++
+average'Ä±n deÄŸerini yazmak iÃ§in %.2f Ã§evrim belirtecini kullanmÄ±ÅŸtÄ±k. 
+f bir ondalÄ±k deÄŸerin yazÄ±lacaÄŸÄ± belirtir. .2 de, deÄŸerin gÃ¶sterileceÄŸi kesinliktir-
+virgÃ¼lden sonra 2 basamaklÄ±-. %f Ã§evirm belirteci kullanÄ±lÄ±rsa (kesinlik deÄŸeri 
+belirtmeden), tanÄ±mlÄ± olan 6 kesinlik deÄŸeri kullanÄ±lÄ±r. - %.6f Ã§evrim belirteci 
+kullanÄ±lmasÄ±yla tamamen aynÄ±dÄ±r- . OndalÄ±k deÄŸerler belirli bir kesinlikle yazÄ±ldÄ±ÄŸÄ±
+zaman, yazÄ±lacak deÄŸer iÅŸaret edilen sayÄ±nÄ±n virgÃ¼lden sonraki yerine vurgulanÄ±r.
+HafÄ±zadaki yeri deÄŸiÅŸmez. AÅŸÄŸÄ±daki ifadeler Ã§alÄ±ÅŸtÄ±ÄŸÄ± zaman, 3.45 ve 3.4 deÄŸerlerini
+yazacaktÄ±r.
+
+
+printf ( "%.2f\n", 3.446 ); // 3.45 yazar
+printf ( "%.1f\n", 3.446 ); // 3.4 yazar
+
+Not: 3.446 â†’ 2 basamaklÄ± hale yuvarlandÄ±ÄŸÄ±nda 3.45 olur 
+(Ã§Ã¼nkÃ¼ son rakam 6, yani â‰¥ 5). EÄŸer sayÄ± 3.444 olsaydÄ±, Ã§Ä±ktÄ± 3.44 olurdu.
 
 
 
