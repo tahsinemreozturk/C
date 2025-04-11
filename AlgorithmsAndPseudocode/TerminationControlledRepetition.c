@@ -246,9 +246,85 @@ Not: 3.446 → 2 basamaklı hale yuvarlandığında 3.45 olur
 
 
 
+ONDALIK SAYILAR ÜZERİNE NOTLAR
+
+Ondalık sayılar her zaman %100 kesin olmasa bile, çok sayıda uygulaması vardır.
+Örneğin, normal vücut sıcaklığı 36.5 dediğimiz zaman, virgülden sonra çok fazla 
+basamakla kesin olmaya ihtiyacımız olmaz. Bir derece üzerinde sıcaklığı gördüğümüz
+ve 36.5 okuduğumuzda, aslında değer 36,49999473210 olabilir. Buradaki husus, bu 
+sayıya 36,5 demenin çoğu uygulama için yeterli olduğudur. Bu konu hakkında daha sonra
+bahsedeceğiz. 
+	Ondalık sayı geliştirmenin bir diğer yolu bölmedir. 10'u 3'e böldüğümüzde, sonuç,
+sonsuza kadar giden 3'lerden oluşan 3,3333333... tür. Bilgisayar, böyle değerleri
+tutmak için sabit büyüklükte bir yer ayırır, böylece saklanan ondalık değer yalnızca
+yaklaşık olabilir. 
+
+
+Hata Öneleme Önerisi
+Ondalık değerler eşitlik ile karşılaştırılmamalı
+C dilinde ondalık (float/double) değerleri doğrudan == ile karşılaştırmak genellikle
+hataya sebep olur. Bunun sebebi, ondalık sayıların bellekte tam olarak temsil 
+edilememesi ve çok küçük yuvarlama hatalarının oluşmasıdır.
+
+
+#include <stdio.h>
+
+int main() {
+	float a = 0.1 + 0.2;
+	if (a == 0.3)
+		printf("Eşit\n");
+	else
+		printf("Eşit değil\n");
+	return 0;
+}
+
+
+Beklenen:
+Eşit yazması, çünkü 0.1 + 0.2 = 0.3 gibi görünüyor.
+
+❌ Gerçek Çıktı:
+Eşit değil
+Çünkü 0.1 + 0.2 sonucunun bellekteki karşılığı tam olarak 0.3 değildir, virgülden
+sonra çok küçük bir fark olur.
+
+
+Doğru Yaklaşım: Tolerans (epsilon) kullanmak
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+	float a = 0.1 + 0.2;
+	float b = 0.3;
+	float epsilon = 0.00001;
+
+	if (fabs(a - b) < epsilon)
+		printf("Eşit (epsilon toleransıyla)\n");
+	else
+		printf("Eşit değil\n");
+
+	return 0;
+}
+
+Bu şekilde küçük sapmalar önemsiz kabul edilir ve karşılaştırma daha güvenilir olur.
 
 
 
+#### ---> fabs, C dilinde math.h kütüphanesinde tanımlı bir fonksiyondur ve bir 
+double değerin mutlak değerini döndürür.
 
+double fabs(double x);
+
+fabs(-3.14) → 3.14
+fabs(0.0) → 0.0
+fabs(2.71) → 2.71
+
+
+
+Neden fabs kullandık?
+
+Normalde int değerler için abs() kullanılır.
+Ama abs() sadece tam sayılar (int) içindir.
+Ondalık sayılar (float/double) için fabs() kullanılır.
 
 */
