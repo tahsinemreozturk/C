@@ -101,7 +101,37 @@ sözde kodu aþaðýdaki gibi düzenlenebilir:
 
 Bu sözde kod þimdi C'ye dönüþüm için yeterlidir. 
 
-
-
-
 */
+
+#include <stdio.h>
+
+int main(void) {
+
+	unsigned int passes = 0;
+	unsigned int failures = 0;
+	unsigned int student = 1;
+	int result;
+
+	while (student <= 10) {
+
+		printf("%s", "Enter result (1=pass, 2=fail ): ");
+		scanf_s("%d", &result);
+
+		if (result == 1) {
+			passes = passes + 1;
+		}
+		else {
+			failures = failures + 1;
+		}
+
+		student = student + 1;
+	}
+
+	printf("Passed %u ", passes);
+	printf("Failed %u\n", failures);
+
+	if (passes > 8) {
+		puts("Bonus to instructor! ");
+	}
+}
+
