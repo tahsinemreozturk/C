@@ -27,3 +27,33 @@ Atama Ýþlemi	Örnek Ýfade		Açýklama		Atamalar
 
 
 */
+
+
+/*
+C ayrýca ++, tekil bir artýrma ve --, tekil bir azaltma iþlemine sahiptir. Eðer bir c deðiþkeni
+1 attýrýlacaksa, c = c + 1 veya c += 1 ifadeleri yerine ++ bir arttýrma iþlemi kullanýlabilir.
+Eðer bir arttýrma veya azalatma iþlemi bir deðiþkenden önce gelirse, bunlara sýrasýyla önceden
+arttýrma veya önceden azaltma iþlemleri denir. Eðer bir arttýrma veya azaltma iþlemi bir 
+deðiþkenden sonra gelirse, bunlara sýrasýyla sonradan arttýrma veya sonradan azaltma iþlemleri
+denir. Bir deðiþkeni önceden arttýrma, deðiþkenin 1 attýrýlmasýna, sonra gözüktüðü ifadede bu
+yeni deðerin kullanýlmasýna neden olur. Deðiþkeni sonradan arttýrma deðiþkenin o andaki deðeri
+nin gözüktüðü ifadede kullanýlmasýna, sonra deðiþken deðerinin 1 arttýrýlmasýna neden olur.
+
+
+   Ýþlem	   Örnek Ýfade		Açýklama		
+	++			 ++a	  a'yý 1 artar, sonra a'nýn olduðu ifadede a'nýn yeni deðerini kullan.
+
+	++			 a++	  a'nýn olduðu ifadede þimdiki deðerini kullan daha sonra 1 arttýr.		
+
+	--			 --b	  b'yi 1 azalt, sonra b'nin olduðu ifadede b'nin yeni deðerini kullan.		
+
+	--			 b--	  b'nin olduðu ifadede þimdiki deðerini kullan daha sonra 1 azalt.
+
+
+
+
+	Aþaðýdaki kodda iþlemin önceden arttýrma ve sonradan arttýrma durumlarý arasýndaki fark
+	gösterilmiþtir. c deðiþkenini sonradan arttýrmak, printf ifadesinde kullanýldýktan sonra
+	arttýrýlmasýna neden olur. c deðiþkeni önceden arttýrma, printf ifadesinde kullanýlmadan
+	önce arttýrýlmasýna neden olur.
+*/
