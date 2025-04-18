@@ -57,3 +57,25 @@ nin gözüktüðü ifadede kullanýlmasýna, sonra deðiþken deðerinin 1 arttýrýlmasýna 
 	arttýrýlmasýna neden olur. c deðiþkeni önceden arttýrma, printf ifadesinde kullanýlmadan
 	önce arttýrýlmasýna neden olur.
 */
+
+#include <stdio.h>
+
+int main(void) {
+
+	int c;
+
+	//sonradan arttirma 
+	c = 5;
+	printf("%d\n", c);
+	printf("%d\n", c++); //yazdýrýldýktan sonra bir arttý
+	printf("%d\n\n", c);
+
+	//onceden arttirma
+	c = 5;
+	printf("%d\n", c);
+	printf("%d\n", ++c); // yazmadan önce bir arttý
+	printf("%d\n\n", c);
+	
+}
+
+//NOT: Tekil iþlemler, araya bir boþul býraklýmadan direkt olarak teriminin yanýna yerleþtirilir.
