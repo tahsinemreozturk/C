@@ -58,24 +58,69 @@ nin gözüktüðü ifadede kullanýlmasýna, sonra deðiþken deðerinin 1 arttýrýlmasýna 
 	önce arttýrýlmasýna neden olur.
 */
 
-#include <stdio.h>
-
-int main(void) {
-
-	int c;
-
-	//sonradan arttirma 
-	c = 5;
-	printf("%d\n", c);
-	printf("%d\n", c++); //yazdýrýldýktan sonra bir arttý
-	printf("%d\n\n", c);
-
-	//onceden arttirma
-	c = 5;
-	printf("%d\n", c);
-	printf("%d\n", ++c); // yazmadan önce bir arttý
-	printf("%d\n\n", c);
-	
-}
+//#include <stdio.h>
+//
+//int main(void) {
+//
+//	int c;
+//
+//	//sonradan arttirma 
+//	c = 5;
+//	printf("%d\n", c);
+//	printf("%d\n", c++); //yazdýrýldýktan sonra bir arttý
+//	printf("%d\n\n", c);
+//
+//	//onceden arttirma
+//	c = 5;
+//	printf("%d\n", c);
+//	printf("%d\n", ++c); // yazmadan önce bir arttý
+//	printf("%d\n\n", c);
+//	
+//}
 
 //NOT: Tekil iþlemler, araya bir boþul býraklýmadan direkt olarak teriminin yanýna yerleþtirilir.
+
+/*
+passes = passes + 1;
+failures = failures + 1;
+student = student + 1;
+
+bu üç atama ifadesi, atama iþlemleri ile daha kýsa olarak aþaðýdaki gibi yapýlabilir.
+
+passes += 1;
+failures += 1;
+student += 1;
+
+önceden arttýrma ile de aþaðýdaki gibi;
+
+++passes;
+++failures;
+++student;
+
+sonradan arttýrma iþlemi ile de aþaðýdaki gibi yazýlabilir.
+
+passes++;
+failures++;
+student++;
+
+
+	Ýþlemler			Yön				Tür
+	 * / %			soldan saða		 çarpýmsal
+	 + -			soldan saða		 toplamsal
+   < <= > >=		soldan saða		 iliþkisel
+     == !=			soldan saða		  eþitlik
+
+
+	 ?:				saðdan sola		  koþullu
+= += -= *= /= %=	saðdan sola		  atama
+	++int			saðdan sola		  son ek
+	int++			saðdan sola		  tekil
+
+
+NOT: Bir arttýram veya azaltma iþlemini basit bir deðiþken ismi yerine bir ifade üzerinde
+kullanmaya teþebbüs etmek, bir söz dizim hatasýdýr. Örneðin, ++(x+2) yazmak.
+
+NOT: C genellikle bir iþlemde terimlerim hangi sýrada iþleneceðini (evaluation order) bilmez.
+Bundan dolayý, bir arttýrma veya azaltma iþlemini, yalnýzca bir deðiþkenin kendi baþýna 
+arttýrýldýðý ya da azaltýldýðý ifadeler içersinde kullanmalýsýnýz.
+*/
