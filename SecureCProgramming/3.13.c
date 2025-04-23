@@ -47,6 +47,15 @@ Bu konuda daha fazla bilgi için Robert Seacord' un Secure Coding in C and C++ ki
 Integer Security bölümü okunabilir.
 
 
+scanf_s Ve printf_s
+
+C11 standardýnýn K eklentisi, printf_s ve scanf_s denen printf ve scanf' in daha 
+güvenli sürümüne sahiptir. K eklentisi, isteðe baðlý olarak belirlenmiþtir, bu nedenle
+her C tedarikçisi bunu saðlamaz. 
+
+C11 standardýnýn yayýnlanmasýndan önce Microsoft kendi printf_s ve scanf_s sürümlerini
+gerçekleþtirmiþ ve hemen her scanf kullanýmý için uyarý mesajý vermeye baþlamýþtýr.
+Uyar: scanf yerine scanf_s' in kullanýlmasýný söyler.
 
 
 
