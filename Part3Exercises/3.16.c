@@ -65,48 +65,48 @@ Bitir
 
 */
 
-#include <stdio.h>
-
-int main () 
-{
-    float kullanilanLitre = 0; 
-    float gidilenKilometre = 0;
-    float yakitTuketimi = 0;
-    float toplamLitre = 0;
-    float toplamKilometre = 0;
-    float toplamyakitTuketimi = 0;
-
-    while (kullanilanLitre != -1)
-    {
-        printf("Kullanilan Litreyi Girin: ");
-        scanf_s("%f", &kullanilanLitre);
-
-        if (kullanilanLitre == -1) 
-        {
-            break;
-        }
-        printf("Gidilen Kilometreyi Girin: ");
-        scanf_s("%f", &gidilenKilometre);
-
-        yakitTuketimi = (kullanilanLitre / gidilenKilometre) * 100;
-
-        printf("Bu depo icin Lt/100Km: %f\n\n", yakitTuketimi);
-
-        //toplamLitre = kullanilanLitre + toplamLitre; 
-        toplamLitre += kullanilanLitre; 
-        //toplamKilometre = gidilenKilometre + toplamKilometre;
-        toplamKilometre += gidilenKilometre; 
-    }
-
-
-    if (gidilenKilometre != 0)  
-    {
-        toplamyakitTuketimi = (toplamLitre / toplamKilometre) * 100;    
-
-        printf("Bu depo icin genel ortalama Lt/100Km: %f\n\n", toplamyakitTuketimi);  
-    }
-
-
-    return 0;
-
-}
+//#include <stdio.h>
+//
+//int main () 
+//{
+//    float kullanilanLitre = 0; 
+//    float gidilenKilometre = 0;
+//    float yakitTuketimi = 0;
+//    float toplamLitre = 0;
+//    float toplamKilometre = 0;
+//    float toplamyakitTuketimi = 0;
+//
+//    while (kullanilanLitre != -1)
+//    {
+//        printf("Kullanilan Litreyi Girin: ");
+//        scanf_s("%f", &kullanilanLitre);
+//
+//        if (kullanilanLitre == -1) 
+//        {
+//            break;
+//        }
+//        printf("Gidilen Kilometreyi Girin: ");
+//        scanf_s("%f", &gidilenKilometre);
+//
+//        yakitTuketimi = (kullanilanLitre / gidilenKilometre) * 100;
+//
+//        printf("Bu depo icin Lt/100Km: %f\n\n", yakitTuketimi);
+//
+//        //toplamLitre = kullanilanLitre + toplamLitre; 
+//        toplamLitre += kullanilanLitre; 
+//        //toplamKilometre = gidilenKilometre + toplamKilometre;
+//        toplamKilometre += gidilenKilometre; 
+//    }
+//
+//
+//    if (gidilenKilometre != 0)  
+//    {
+//        toplamyakitTuketimi = (toplamLitre / toplamKilometre) * 100;    
+//
+//        printf("Bu depo icin genel ortalama Lt/100Km: %f\n\n", toplamyakitTuketimi);  
+//    }
+//
+//
+//    return 0;
+//
+//}
