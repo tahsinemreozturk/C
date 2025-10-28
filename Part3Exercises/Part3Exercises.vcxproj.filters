@@ -21,5 +21,8 @@
     <ClCompile Include="3.17.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="3.18.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
