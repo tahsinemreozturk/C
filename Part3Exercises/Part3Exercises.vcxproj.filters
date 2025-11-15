@@ -72,5 +72,8 @@
     <ClCompile Include="3.34.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="3.35.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
