@@ -102,5 +102,8 @@
     <ClCompile Include="3.44.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="3.45.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
