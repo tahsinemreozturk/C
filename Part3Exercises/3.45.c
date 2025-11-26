@@ -2,7 +2,7 @@
 
 int main()
 {
-	printf("Faktoriyel hesaplayan program\n");
+	/*printf("Faktoriyel hesaplayan program\n");
 
 	int n;
 	int a = 0;
@@ -27,6 +27,28 @@ int main()
 	else
 	{
 		printf("Negatif sayilarin faktoriyeli hesaplanamaz.\n");
-	}
+	}*/
 		
+
+	// e sabitinin degerini tahmin eden program.
+
+	int n, i;
+	double e = 1.0;
+	double factorial = 1.0;
+
+	printf("e icin kac terim hesaplansin ? (Bir pozitif tam sayi degeri giriniz) : ");
+	scanf_s("%d", &n);
+
+	for (i = 1; i <= n; i++)
+	{
+		factorial = factorial * i; // i! hesaplama
+		e = e + 1.0 / factorial;    // e'ye i!'nin tersi ekleme
+	}
+
+	printf("e sayisinin tahmini degeri: %lf\n", e);
+
+
+
+
+
 }
