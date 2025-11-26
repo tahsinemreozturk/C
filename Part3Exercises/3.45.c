@@ -32,23 +32,42 @@ int main()
 
 	// e sabitinin degerini tahmin eden program.
 
-	int n, i;
-	double e = 1.0;
-	double factorial = 1.0;
+	//int n, i;
+	//double e = 1.0;
+	//double factorial = 1.0;
 
-	printf("e icin kac terim hesaplansin ? (Bir pozitif tam sayi degeri giriniz) : ");
+	//printf("e icin kac terim hesaplansin ? (Bir pozitif tam sayi degeri giriniz) : ");
+	//scanf_s("%d", &n);
+
+	//for (i = 1; i <= n; i++)
+	//{
+	//	factorial = factorial * i; // i! hesaplama
+	//	e = e + 1.0 / factorial;    // e'ye i!'nin tersi ekleme
+	//}
+
+	//printf("e sayisinin tahmini degeri: %lf\n", e);
+
+
+	/* e^x hesaplama bölümü */
+
+	int n, i;
+	double x;
+	double result = 1.0;
+	double term = 1.0;
+
+	printf("\nx degerini giriniz: ");
+	scanf_s("%lf", &x);
+
+	printf("e^x icin kac terim kullanilsin ? ");
 	scanf_s("%d", &n);
 
 	for (i = 1; i <= n; i++)
 	{
-		factorial = factorial * i; // i! hesaplama
-		e = e + 1.0 / factorial;    // e'ye i!'nin tersi ekleme
+		term = term * (x / i); // x^i / i! hesaplama
+		result = result + term; // Sonuca ekleme
 	}
 
-	printf("e sayisinin tahmini degeri: %lf\n", e);
-
-
-
+	printf("Yaklasik e^x degeri = %lf\n", result);
 
 
 }
