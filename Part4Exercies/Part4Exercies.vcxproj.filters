@@ -27,5 +27,8 @@
     <ClCompile Include="4.8.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="4.9.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
