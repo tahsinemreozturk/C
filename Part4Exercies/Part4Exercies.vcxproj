@@ -103,7 +103,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
@@ -130,6 +130,7 @@
   <ItemGroup>
     <ClCompile Include="4.10.c" />
     <ClCompile Include="4.11.c" />
+    <ClCompile Include="4.12.c" />
     <ClCompile Include="4.5.c" />
     <ClCompile Include="4.6.c" />
     <ClCompile Include="4.7.c" />
