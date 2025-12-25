@@ -131,6 +131,7 @@
     <ClCompile Include="4.10.c" />
     <ClCompile Include="4.11.c" />
     <ClCompile Include="4.12.c" />
+    <ClCompile Include="4.13.c" />
     <ClCompile Include="4.5.c" />
     <ClCompile Include="4.6.c" />
     <ClCompile Include="4.7.c" />
