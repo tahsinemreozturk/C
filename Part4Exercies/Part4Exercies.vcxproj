@@ -140,6 +140,7 @@
     <ClCompile Include="4.19.c" />
     <ClCompile Include="4.20.c" />
     <ClCompile Include="4.21.c" />
+    <ClCompile Include="4.22.c" />
     <ClCompile Include="4.5.c" />
     <ClCompile Include="4.6.c" />
     <ClCompile Include="4.7.c" />
