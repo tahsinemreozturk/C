@@ -242,3 +242,87 @@ int main(void) {
  *
  * ===================================================================
  */
+
+ /*
+  * ===================================================================
+  * FALL-THROUGH DETAYLI ACIKLAMA
+  * ===================================================================
+  *
+  * CALISMA MANTIGI:
+  * ================
+  *
+  * switch (x) {
+  *     case 3:
+  *         printf("A");  // break yok
+  *     case 2:
+  *         printf("B");  // break yok
+  *     case 1:
+  *         printf("C");
+  *         break;        // Simdi dur
+  * }
+  *
+  * x = 3 ise:
+  *   1. case 3'e gir -> "A" yaz
+  *   2. break yok -> case 2'ye GEC
+  *   3. "B" yaz
+  *   4. break yok -> case 1'e GEC
+  *   5. "C" yaz
+  *   6. break var -> CIK
+  *   Sonuc: "ABC" yazdirilir
+  *
+  * x = 2 ise:
+  *   1. case 2'ye gir -> "B" yaz
+  *   2. break yok -> case 1'e GEC
+  *   3. "C" yaz
+  *   4. break var -> CIK
+  *   Sonuc: "BC" yazdirilir
+  *
+  * x = 1 ise:
+  *   1. case 1'e gir -> "C" yaz
+  *   2. break var -> CIK
+  *   Sonuc: "C" yazdirilir
+  *
+  *
+  * PRATIK KULLANIM ALANLARI:
+  * ==========================
+  *
+  * 1. Oyun Seviyeleri:
+  *    Seviye 5 oyuncu, seviye 1-4'un yeteneklerini de kullanabilir
+  *
+  * 2. Izin Seviyeleri:
+  *    Admin, normal kullanici yetkilerini de icerir
+  *
+  * 3. Kumulatif Gorevler:
+  *    Gun 5'te, gun 1-4'un gorevlerini de yapmis olmalisin
+  *
+  * 4. Muzik Sarkilari:
+  *    "Twelve Days of Christmas" gibi kumulatif sarkýlar
+  *
+  *
+  * YAYIN HATALAR:
+  * ==============
+  *
+  * HATA 1: Kazara break unutmak
+  * -----------------------------
+  * switch (x) {
+  *     case 1: printf("Bir");   // break unutuldu!
+  *     case 2: printf("Iki");   break;
+  * }
+  * x=1 ise hem "Bir" hem "Iki" yazdirilir (istenmeyen!)
+  *
+  * Cozum: Her case'den sonra break kullan
+  *        VEYA fall-through kasitliysa yorum ekle
+  *
+  *
+  * HATA 2: Son case'de break unutmak
+  * -----------------------------------
+  * switch (x) {
+  *     case 2: printf("Iki");
+  *     case 1: printf("Bir");  // break yok!
+  * }
+  * Switch'ten cikilmaz, tanimsiz davranis!
+  *
+  * Cozum: Son case'de MUTLAKA break kullan
+  *
+  * ===================================================================
+  */
